@@ -108,7 +108,7 @@ def return_analysis(stocks_dict, market_cap_dict, sector):
     return s, sector_index_ret, indices_df
 
 
-def run():
+def _run():
     n = NSELive()
     zip_file_path = "StocksAndSectors.zip"
     extracted_dir = "extracted_files"
@@ -177,12 +177,15 @@ def run():
 
     with open(f"last_run.txt", "w") as f:
         f.write(str(datetime.datetime.now()))
-
-if __name__ == '__main__':
+def run():
     time_rn = datetime.datetime.now()
     if ((not os.path.exists('last_run.txt')) or
-            (time_rn - datetime.datetime.strptime(open('last_run.txt').read(), '%Y-%m-%d %H:%M:%S.%f') > datetime.timedelta(days=1)) or (datetime.datetime.now().hour > 23)):
-        run()
+            (time_rn - datetime.datetime.strptime(open('last_run.txt').read(),
+                                                  '%Y-%m-%d %H:%M:%S.%f') > datetime.timedelta(days=1)) or (
+                    datetime.datetime.now().hour > 23)):
+        _run()
     else:
         print('No need to run')
         pass
+if __name__ == '__main__':
+    run()
