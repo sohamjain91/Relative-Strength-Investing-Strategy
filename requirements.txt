@@ -1,0 +1,10 @@
+matplotlib
+jugaad-data
+seaborn
+streamlit
+plotly
+pandas
+openpyxl
+flask
+gunicorn
+yfinance

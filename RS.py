@@ -177,6 +177,8 @@ def _run():
 
     with open(f"last_run.txt", "w") as f:
         f.write(str(datetime.datetime.now()))
+
+
 def run():
     time_rn = datetime.datetime.now()
     if ((not os.path.exists('last_run.txt')) or
@@ -187,5 +189,7 @@ def run():
     else:
         print('No need to run')
         pass
+
+
 if __name__ == '__main__':
     run()
