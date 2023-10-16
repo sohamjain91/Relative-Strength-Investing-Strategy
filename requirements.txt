@@ -5,6 +5,5 @@ streamlit
 plotly
 pandas
 openpyxl
-flask
 gunicorn
 yfinance
