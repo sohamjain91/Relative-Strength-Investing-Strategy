@@ -1,6 +1,6 @@
-/sector_analysis.pkl
-/sector_indices.pkl
-/sector_returns.pkl
+sector_analysis.pkl
+sector_indices.pkl
+sector_returns.pkl
 /__pycache__/
 __pycache__/*
 .idea
