@@ -1,4 +1,3 @@
-matplotlib
 jugaad-data
 seaborn
 streamlit

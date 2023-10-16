@@ -4,14 +4,14 @@ import datetime
 from jugaad_data.nse import NSELive
 
 import warnings
-
+from RS import run
 import streamlit as st
 import pickle
 from matplotlib.colors import Normalize
 import plotly.express as px
 warnings.filterwarnings("ignore")
 n = NSELive()
-
+run()
 input_path = ""
 
 with open(f"{input_path}sector_analysis.pkl", "rb") as f:
